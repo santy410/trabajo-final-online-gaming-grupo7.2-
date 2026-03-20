@@ -1,11 +1,25 @@
 # Online gaming (Trabajo de computación I, 1-2026)
-Trabajo colaborativo de análisis estadistico básico
-Los videojuegos en la actualidad constituyen una industria cultural dominante, superando al cine y la música, con más de 3.200 millones de jugadores a nivel mundial. Hoy en día, son una forma de entretenimiento social e intergeneracional ,caracterizada por la democratización del desarrollo, la inmersión de la Realidad Virtual y la integración de la inteligencia artificial. 
-Sin embargo, los beneficios de los videojuegos incluyen el desarrollo de habilidades como la atención, la creatividad, la memoria, los idiomas y el trabajo en equipo. Los videojuegos facilitan el aprendizaje de los contenidos educativos y el desarrollo de habilidades cognitivas, para así determinar algunos problemas para definir el texto a tratar   queriendo llegar a saber como influyen la demografía y las características del juego en el tiempo total de dedicación, así mismo evaluar si existen preferencias de modos entre sexo. 
-La ausencia de un modelo claro que cuantifique como estas variables categóricas impactan el rendimiento de los jugadores Argumento final. Debido a esto, se plantea las siguientes preguntas de investigación:
-Objetivos específicos 
-1.	Impacto de la dificultad: ¿cual es el nivel de desafío (fácil, mediano, difícil) altera significativamente en las horas de juego.?
 
-2.	Preferencias por género: Identificar que categorías (RPG Sports, Actino, Strategy, Simulation.) Acumulan mayor tiempo de uso.?
-3.	Hacer una comparación de la  elección de niveles de dificultad entre hombres y mujeres 
+## Título Sugerido: Determinantes del Engagement y la Fidelización en la Industria del Videojuego
+### Introducción del Enfoque
 
+A diferencia del análisis tradicional de mercado, este estudio se propone explorar la resiliencia del hábito de consumo. El crecimiento de la industria no solo depende de atraer nuevos jugadores, sino de entender qué factores convierten una interacción esporádica en un patrón de comportamiento sostenido. No buscamos solo saber "qué se juega y dónde", sino cómo la estructura del género y el contexto geográfico dictan la longevidad del interés del usuario.
+
+## Objetivos 
+### Interrogantes de Investigación
+
+Para este enfoque, las preguntas cambian su eje de "popularidad" a "comportamiento":
+1.	¿Cuáles son las diferencias de consumo (horas y frecuencia) entre los distintos géneros de videojuegos según la ubicación geográfica?
+
+2.	¿Es posible definir perfiles de jugadores (esporádicos vs. intensivos) basados en la relación entre sus horas totales y sus sesiones semanales?
+
+
+
+
+## Justificación del Diferencial
+
+Esta perspectiva permite superar la visión estática de la "foto del mercado" para pasar a una visión dinámica de ciclo de vida del jugador. Al analizar si la intensidad del uso es un predictor de abandono o de lealtad, el estudio aporta valor en el diseño de mecánicas de retención y monetización sostenible, diferenciándose de un análisis puramente orientado a ventas o lanzamientos.
+
+### Utilidad del Conocimiento
+
+El valor de este análisis radica en la capacidad de predecir el "churn rate" (tasa de abandono) potencial de una comunidad. Entender si un jugador de una región específica tiende a "quemar" el contenido rápidamente (muchas horas en pocas sesiones) o a consumirlo de forma dosificada (sesiones breves y constantes) es vital para la planificación de actualizaciones y mantenimiento de servidores post-lanzamiento.
