@@ -1,6 +1,6 @@
 ---
 # --- Metadatos Básicos ---
-title: "holaaaa"
+title: "holaaaa67667"
 author:
    - Primer participante
    - Segundo participante
