@@ -1,5 +1,7 @@
 ---
 # --- Metadatos Básicos ---
+title: "holaaaa67667"
+>>>>>>> 47fbc0b52e49e2f34ea44e9f5cbba74ab3d93950
 author:
    - Randy Conde 
    - Santiago Hernandez 
