@@ -1,9 +1,8 @@
 ---
 # --- Metadatos Básicos ---
-title: "Título del Trabajo Final"
 author:
-   - Primer participante
-   - Segundo participante
+   - Randy Conde 
+   - Santiago Hernandez 
    - Tercer participante
 date: "Febrero 2026"
 
