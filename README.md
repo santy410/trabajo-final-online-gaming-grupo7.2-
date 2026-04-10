@@ -1,4 +1,4 @@
-# #  Titulo: "Análisis del Compromiso del Usuario según el Perfil Demográfico y el Género de Juego"
+##Análisis del Compromiso del Usuario según el Perfil Demográfico y el Género de Juego"
 
 
 
