@@ -15,6 +15,18 @@ La importancia de este estudio se establece en la necesidad de transformar los d
 Desde un punto de vista académico, este análisis aplica herramientas de procesamiento de datos para identificar patrones de comportamiento. Desde una perspectiva práctica, los resultados permitirán segmentar a los jugadores de manera eficiente, optimizando el diseño de los videojuegos para que se ajusten a las capacidades y tiempos de cada rango de edad, garantizando así un nivel de compromiso optimo que asegure la permanencia del usuario en el tiempo. 
 
 
+OBJETIVO GENERAL: 
+
+Analizar la relación entre el perfil demográfico (edad) y el comportamiento de juego (tiempo de sesión) para determinar su impacto en el nivel de compromiso (Engagement) del usuario según el genero de videojuego. 
+
+
+OBJETIVOS ESPECIFICOS: 
+ 
+1.	Identificar el perfil demográfico y de consumo de los jugadores mediante mediadas de tendencia central y dispersión. 
+2.	Comparar el tiempo promedio de sesión y la edad media entre los distintos niveles de compromiso (Engagement level).
+3.	Determinar la distribución de los niveles de compromiso dentro de cada genero de videojuego para identificar los segmentos de mayor fidelidad. (retención, lealtad )
+4.	Comparar la duración promedio de las sesiones de juego entre los distintos niveles de dificultad para identificar si los retos más complejos generan una mayor permanencia del usuario.  
+  
 
 
 
