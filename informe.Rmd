@@ -1,10 +1,9 @@
 ---
 # --- Metadatos Básicos ---
-title: "holaaaa67667"
->>>>>>> 47fbc0b52e49e2f34ea44e9f5cbba74ab3d93950
+title: "Título del Trabajo Final"
 author:
-   - Randy Conde 
-   - Santiago Hernandez 
+   - Primer participante
+   - Segundo participante
    - Tercer participante
 date: "Febrero 2026"
 
