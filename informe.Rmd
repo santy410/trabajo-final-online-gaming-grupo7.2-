@@ -1,9 +1,9 @@
 ---
 # --- Metadatos Básicos ---
-title: "Título del Trabajo Final"
+title: "Análisis del Compromiso del Usuario según el Perfil Demográfico y el Género de Juego"
 author:
-   - Primer participante
-   - Segundo participante
+   - santiago hernandez 31794175
+   - randy conde 32151653
    - Tercer participante
 date: "Febrero 2026"
 
