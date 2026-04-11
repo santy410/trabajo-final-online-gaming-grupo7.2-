@@ -1,3 +1,8 @@
+---
+output:
+  html_document: default
+  pdf_document: default
+---
 # Análisis del Compromiso del Usuario según el Perfil Demográfico y el Género de Juego🕹️🎮
 
 # PLANTEAMIENTO DEL PROBLEMA 
@@ -23,5 +28,5 @@ Analizar la relación entre el perfil demográfico (edad) y el comportamiento de
 1.	Identificar el perfil demográfico y de consumo de los jugadores mediante mediadas de tendencia central y dispersión. 
 2.	Comparar el tiempo promedio de sesión y la edad media entre los distintos niveles de compromiso (Engagement level).
 3.	Determinar la distribución de los niveles de compromiso dentro de cada genero de videojuego para identificar los segmentos de mayor fidelidad. (retención, lealtad )
-4.	Comparar la duración promedio de las sesiones de juego entre los distintos niveles de dificultad para identificar si los retos más complejos generan una mayor permanencia del usuario.  
+4.	Evaluar la relación entre la edad del jugador y la duración de sus sesiones para determinar si el factor generacional influye en la permanencia dentro de los diferentes géneros de juego. 
   
