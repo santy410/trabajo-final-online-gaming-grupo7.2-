@@ -68,11 +68,11 @@ El problema identificado para esta investigación surge de la necesidad de compr
 
 
 
-\textbf{1.}		\
+\textbf{1.}	¿Cuál es el perfil demográfico predominante de los usuarios en cuanto a edad y tiempo de conexión, y cómo varían estas medidas de tendencia central según el grupo analizado?	\
 
-\textbf{2.}		.\
+\textbf{2.}	¿Existen diferencias significativas en la edad media y la duración de las sesiones de juego cuando se comparan los distintos niveles de compromiso ?	\
 
-\textbf{3.}		)\
+\textbf{3.}	¿Cómo se distribuyen proporcionalmente los niveles de lealtad y retención dentro de cada género de videojuego, y qué segmentos presentan la mayor fidelidad?	\
 
 
 \section{Justificación}
