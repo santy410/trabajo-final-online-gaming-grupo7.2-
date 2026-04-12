@@ -41,7 +41,61 @@ print(df['GameGenre'].value_counts())
 print("\nDistribución por Nivel de Compromiso:")
 print(df['EngagementLevel'].value_counts())
 
+# Empezamos con el dashboard
 
-            
+# 1 Configuración de página
+st.set_page_config(
+    page_title="Dashboard Gaming",
+    page_icon="🎮",
+    layout="wide"
+)
 
+# 2 Carga de datos
+@st.cache_data
+def cargar_datos():
+    df = pd.read_csv("17. Online Gaming (5).csv")
+    return df[['Age', 'AvgSessionDurationMinutes', 'GameGenre', 'EngagementLevel']]
+
+df = cargar_datos()
+
+# 3. Título principal
+st.title("Análisis del Compromiso del Usuario según el Perfil Demográfico y el Género de Juego🕹️🎮")
+st.markdown("En este panel interactivo analizarás el comportamiento y la persistencia de los jugadores en entornos virtuales. A través de esta interfaz, explorarás la relación entre la edad del usuario y la duración de sus sesiones, identificando los géneros de videojuegos y los perfiles demográficos con mayores niveles de compromiso.")
+ 
+# Panel lateral izquierdo, filtro para la edad 
+
+with st.sidebar:
+    st.header("Filtros de busqueda ⚙️")
+    st.write("Ajusta el rango de edad para poder actualizar los gráficos")
+    
+    # Filtro de Edad Rango 15 a 49
+    rango_edad = st.slider(
+        "Rango de Edad:",
+        min_value=15,
+        max_value=49,
+        value=(15, 49)
+    )
+
+    # filtro de Género de Juego
+    opciones_genero = df['GameGenre'].unique().tolist()
+    seleccion_genero = st.multiselect(
+        "Géneros de Videojuegos:",
+        options=opciones_genero,
+        default=opciones_genero
+    )
+
+  # filtrado de jugadores
+
+edad_minima = rango_edad[0]
+edad_maxima = rango_edad[1]
+
+condicion_edad = (df["Age"] >= edad_minima) & (df["Age"] <= edad_maxima)
+condicion_genero = df["GameGenre"].isin(opciones_genero)
+
+filtro_final = condicion_edad & condicion_genero
+
+# aplicamos filtro para dato final 
+df_filtrado = df[filtro_final]
+
+st.write(f"Viendo datos de {len(df_filtrado)} jugadores que cumplen los criterios")
 
