@@ -1,22 +1,19 @@
-import streamlit as st 
 import pandas as pd
-import plotly.express as px
 
-# 1. Configuración de página
-st.set_page_config(
-    page_title="Dashboard Gaming",
-    page_icon="🎮",
-    layout="wide"
-)
+#  Carga de datos
+nombre_archivo = "17. Online Gaming (5).csv"
+df = pd.read_csv("17. Online Gaming (5).csv")
 
-# 2. Caché y carga de datos
-@st.cache_data
-def cargar_datos():
-    # Usamos el archivo 
-    df = pd.read_csv("17. Online Gaming (5).csv")
-df = cargar_datos()
+# Definimos variables a utilizar 
+variables_necesarias = ['Age', 'AvgSessionDurationMinutes', 'GameGenre', 'EngagementLevel']
 
-# 3. Título principal
-st.title("Análisis del Compromiso del Usuario según el Perfil Demográfico y el Género de Juego🕹️🎮")
-st.markdown("Exploración interactiva")
+# 3 cuantos nulos hay 
+print("conteo de datos nulos por cada variable ")
+print(df[variables_necesarias].isnull().sum())
+
+# 4. Una vista rápida para que veas tus 4 columnas
+print("vista previa de datos")
+print(df[variables_necesarias].head())
+
+
 
