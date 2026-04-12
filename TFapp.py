@@ -99,3 +99,34 @@ df_filtrado = df[filtro_final]
 
 st.write(f"Viendo datos de {len(df_filtrado)} jugadores que cumplen los criterios")
 
+# se divide el espacio para las 4 variables 
+col1, col2, col3, col4 = st.columns(4)
+
+# calculamos los valores de cada una
+
+#prom edio de sesiones por minuto  
+promedio_tiempo = int(df_filtrado['AvgSessionDurationMinutes'].mean())
+col1.metric("Sesión Promedio", f"{promedio_tiempo} min")
+
+# promedio de edad 
+edad_promedio = int(df_filtrado['Age'].mean())
+col2.metric("Edad Media", f"{edad_promedio} años")
+
+# nivel de engagement 
+es_alto = df_filtrado['EngagementLevel'] == 'High'
+cuenta_alto = len(df_filtrado[es_alto])
+col3.metric("Engagement Alto", f"{cuenta_alto} pers.")
+
+# genero de juego mas jugado 
+if len(df_filtrado) > 0:
+    genero_frecuente = df_filtrado['GameGenre'].mode()[0]
+    col4.metric("Género Top", genero_frecuente)
+else:
+    col4.metric("Género Top", "Sin datos")
+
+st.divider()
+
+# ponemos pestañas para organizar 
+lista_pestanas = ["📊 Gráficos Generales", "📈 Relaciones", "📂 Ver Tabla de Datos"]
+pestana1, pestana2, pestana3 = st.tabs(lista_pestanas)
+
