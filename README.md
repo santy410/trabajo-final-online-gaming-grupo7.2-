@@ -1,8 +1,3 @@
----
-output:
-  html_document: default
-  pdf_document: default
----
 # Análisis del Compromiso del Usuario según el Perfil Demográfico y el Género de Juego🕹️🎮
 
 # PLANTEAMIENTO DEL PROBLEMA 
