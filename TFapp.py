@@ -6,7 +6,7 @@ import plotly.express as px
 st.set_page_config(
     page_title="Dashboard Gaming",
     page_icon="🎮",
-    layout="centered"
+    layout="wide"
 )
 
 # 2. Caché y carga de datos
