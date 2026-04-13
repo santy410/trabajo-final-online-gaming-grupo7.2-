@@ -32,8 +32,11 @@ output:
     citation_package: natbib       # Importante: forzar natbib porque tu plantilla lo usa
 
 # --- Resumen (Abstract) ---
-abstract: |
-  Resumen del trabajo de investigación...
+abstract:
+  La investigación utiliza un conjunto de datos que abarca diversos géneros (Estrategia, Deportes, Acción, RPG y Simulación) para evaluar la relación entre el rango de edad de los jugadores y la duración de sus sesiones de juego. Mediante el uso de medidas de tendencia central, dispersión y análisis de correlación, se busca identificar patrones de comportamiento que permitan segmentar a los usuarios según su nivel de compromiso (Alto, Medio o Bajo). Los resultados pretenden aportar una base lógica para optimizar el diseño de juegos y mejorar la persistencia del usuario, transformando datos brutos en información estratégica para la toma de decisiones en el sector del entretenimiento digital.    
+
+
+
 ---
 
 ```{r setup, include=FALSE}
@@ -57,7 +60,8 @@ library(scales)
 
 \chapter*{Introducción}
 
-Introducción del trabajo de investigación
+ El estudio analiza la transición de las plataformas digitales hacia ecosistemas basados en el engagement como métrica clave de éxito. Mediante un enfoque que combina computación y estadística descriptiva, la investigación busca determinar si factores como la edad del jugador o el género del videojuego influyen en la duración de las sesiones y la persistencia del usuario. El objetivo final es transformar datos brutos en perfiles de comportamiento que permitan diseñar experiencias personalizadas y garantizar la sostenibilidad del producto mediante evidencia 
+ 
 
 \chapter{Planteamiento del Problema}
 
@@ -128,14 +132,13 @@ VARIABLE n\\
  
 \section{Periodo de Referencia}
 
-Describir la fuente y el Periodo de Referencia utilizado en el trabajo de investigación
+Dado que los datos originales no incluyen fechas de registro, no se enfoca en tiempo, sino en interacciones. De esta manera el estudio se enfoca en entender como se comportan los distintos perfiles de usuarios y su compromiso con el videojuego
 
 \section{Variables}
 
 Describir la variable en estudio en el trabajo de investigación 
 
-\chapter{marco teorico 
-
+\chapter{marco teorico
  }
 
 
@@ -146,24 +149,24 @@ Describir la variable en estudio en el trabajo de investigación
 En este capítulo se presentan las bases y conceptos necesarios para iniciar el análisis estadístico de conjuntos de datos de videojuegos en línea. Se especifican las técnicas de la estadística descriptiva y las herramientas computacionales que nos puedan facilitar transformar los registros brutos en información útil para comprender el compromiso con el usuario.  
 \
 
-\subsection{Definición 1}
+\subsection{Juegos Online}
 
 JUEGOS ONLNE: Los juegos online son videojuegos que requieren conexión a internet para funcionar, permitiendo a personas de distintos lugares interactuar simultáneamente en partidas compartidas. Funcionan mediante arquitectura cliente-servidor, enviando datos en tiempo real entre los jugadores y servidores \
 
-\subsection{Definición 2}
+\subsection{Como Trabajan Los Jusgos Online}
 
 COMO TRABAJAN LOS JUEGOS ONLINE:  Los juegos online son sistemas complejos que deben coordinar a múltiples jugadores en tiempo real, asegurando que todos vean lo mismo en el menor tiempo posible\
 
-\subsection{Definición 3}
+\subsection{Engagement}
 
 ENGAGEMENT: El engagement es el nivel de compromiso, interacción y conexión emocional que los usuarios tienen con una marca o contenido, yendo más allá de simples medidas como seguidores. Se mide a través de interacciones activas (likes, comentarios, compartidos, guardados) y tiempo de permanencia, convirtiendo seguidores pasivos en embajadores de marca. siendo una medida fundamental para evaluar el éxito de las estrategias de marketing digital. (Alto medio bajo)
 
 \
-\subsection{Definición 4}
+\subsection{Genero De Juego }
 
   GENERO DE JUEGO: En un género de es una clasificación que agrupa títulos con características de jugabilidad, mecánicas y objetivos similares, independientemente de su temática o estética. Define la experiencia del jugador cómo interactúa con el mundo Los géneros permiten identificar rápidamente el tipo de desafío, y a menudo los juegos modernos combinan varios de ellos.\
   
-  \subsection{Definición 5}
+  \subsection{Genero De Juego Que hay En El Dataset}
      GENERO DE JUEGOS QUE HAY EN EL DATASET: 
 
 Strategy (estrategia): El género de estrategia en los videojuegos se define por priorizar el pensamiento táctico, la planificación y la gestión de recursos sobre los reflejos rápidos o la fuerza bruta. El objetivo principal suele ser superar a un oponente mediante una toma de decisiones superior 
@@ -180,7 +183,7 @@ La esencia de un RPG es que tu personaje "crece": empieza siendo débil y, a tra
 
 TIEMPO DE SESION:  El tiempo de sesión (o session time) es una métrica que mide la duración total de una única interacción continua de un usuario con un videojuego o aplicación. Comienza desde que abres el programa y termina cuando lo cierras o dejas de interactuar con él por un periodo prolongado.
 \
- \subsection{Definición 6}
+ \subsection{Estadistica Descrictiva y Bivariante}
     ESTADISTICA DESCRIPTIVA UNIVARIANTE Y BIBARIANTE: 
 
 Estadística Descriptiva Univariante
