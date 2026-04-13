@@ -102,11 +102,9 @@ Analizar la relación entre el perfil demográfico (edad) y el comportamiento de
 \end{itemize}
 
 
-\section{Cobertura}
 
-\subsection{Horizontal}
 
-Describir la cobertura Horizontal del trabajo de investigación\
+
 
 \begin{table}[ht]
 \centering
@@ -124,9 +122,9 @@ VARIABLE n\\
 }
 \end{table}
 
-\subsection{Vertical}
 
-Describir la cobertura Vertical del trabajo de investigación
+
+
  
  
 \section{Periodo de Referencia}
@@ -146,19 +144,96 @@ Describir la variable en estudio en el trabajo de investigación
 
 \section{Bases Teóricas}
 
-Resumen de las bases teoricas explicadas en el capitulo y su importancia\
+En este capítulo se presentan las bases y conceptos necesarios para iniciar el análisis estadístico de conjuntos de datos de videojuegos en línea. Se especifican las técnicas de la estadística descriptiva y las herramientas computacionales que nos puedan facilitar transformar los registros brutos en información útil para comprender el compromiso con el usuario.  
+\
 
 \subsection{Definición 1}
 
-Descripción de la definición 1\
+JUEGOS ONLNE: Los juegos online son videojuegos que requieren conexión a internet para funcionar, permitiendo a personas de distintos lugares interactuar simultáneamente en partidas compartidas. Funcionan mediante arquitectura cliente-servidor, enviando datos en tiempo real entre los jugadores y servidores \
 
 \subsection{Definición 2}
 
-Descripción de la definición 2\
+COMO TRABAJAN LOS JUEGOS ONLINE:  Los juegos online son sistemas complejos que deben coordinar a múltiples jugadores en tiempo real, asegurando que todos vean lo mismo en el menor tiempo posible\
 
-\subsection{Definición n}
+\subsection{Definición 3}
 
-Descripción de la definición n\
+ENGAGEMENT: El engagement es el nivel de compromiso, interacción y conexión emocional que los usuarios tienen con una marca o contenido, yendo más allá de simples medidas como seguidores. Se mide a través de interacciones activas (likes, comentarios, compartidos, guardados) y tiempo de permanencia, convirtiendo seguidores pasivos en embajadores de marca. siendo una medida fundamental para evaluar el éxito de las estrategias de marketing digital. (Alto medio bajo)
+
+\
+\subsection{Definición 4}
+
+  GENERO DE JUEGO: En un género de es una clasificación que agrupa títulos con características de jugabilidad, mecánicas y objetivos similares, independientemente de su temática o estética. Define la experiencia del jugador cómo interactúa con el mundo Los géneros permiten identificar rápidamente el tipo de desafío, y a menudo los juegos modernos combinan varios de ellos.\
+  
+  \subsection{Definición 5}
+     GENERO DE JUEGOS QUE HAY EN EL DATASET: 
+
+Strategy (estrategia): El género de estrategia en los videojuegos se define por priorizar el pensamiento táctico, la planificación y la gestión de recursos sobre los reflejos rápidos o la fuerza bruta. El objetivo principal suele ser superar a un oponente mediante una toma de decisiones superior 
+
+
+  Sports (deportes): Un juego de deporte es un género de videojuegos que simula la práctica de deportes físicos, ya sean tradicionales o ficticios. A diferencia de otros géneros, su mecánica principal se basa en replicar las reglas, el entorno y la competitividad de una disciplina deportiva real.
+
+ Action (acción): Un juego de acción es un género que se centra fundamentalmente en desafíos físicos que requieren reflejos, coordinación ojo-mano y velocidad de reacción. A diferencia de los juegos de estrategia, aquí el progreso depende de tu habilidad para responder rápidamente a los eventos que ocurren en la pantalla.
+
+   RPG (role-playing game): Los RPG (Role-Playing Games) o juegos de rol son un género donde el jugador toma el control de un personaje (o un grupo de ellos) que vive en un mundo detallado. A diferencia de los juegos de pura acción, aquí lo más importante es la progresión, la narrativa y la toma de decisiones.
+La esencia de un RPG es que tu personaje "crece": empieza siendo débil y, a través de la experiencia, se vuelve más poderoso y especializado.
+
+ Simulation (simulación): Un juego de simulación es un género diseñado para recrear aspectos de la vida real de la forma más fiel posible. El objetivo no es siempre "ganar" en el sentido tradicional, sino experimentar una actividad, una profesión o una situación con un nivel de detalle técnico y mecánico muy alto. 
+
+TIEMPO DE SESION:  El tiempo de sesión (o session time) es una métrica que mide la duración total de una única interacción continua de un usuario con un videojuego o aplicación. Comienza desde que abres el programa y termina cuando lo cierras o dejas de interactuar con él por un periodo prolongado.
+\
+ \subsection{Definición 6}
+    ESTADISTICA DESCRIPTIVA UNIVARIANTE Y BIBARIANTE: 
+
+Estadística Descriptiva Univariante
+Se centra en el análisis de una sola variable de forma aislada. Su objetivo es describir las características de esa variable sin considerar su relación con otras.
+
+ Herramientas principales:
+ 
+ Medidas de Tendencia Central: Buscan el centro de los datos
+ 
+  Media: El promedio aritmético
+  
+  Mediana: El valor central cuando los datos están ordenados.
+  
+  Moda: El valor que más se repite.
+  
+  Medidas de Dispersión: Indican qué tan alejados están los datos del centro.
+  
+  Varianza: Promedio de los cuadrados de las desviaciones.
+  
+Desviación estándar: Raíz cuadrada de la varianza (indica dispersión en las unidades originales).
+
+Rango: Diferencia entre el valor máximo y el mínimo.
+
+ 
+ Medidas de Forma y Posición:
+ 
+Cuartiles y Percentiles: Dividen la distribución en partes iguales.
+
+Asimetría y Curtosis: Describen si la distribución es "estirada" hacia un lado o qué tan "puntiaguda" es.
+
+Estadística Descriptiva Bivariante
+
+Se encarga de analizar dos variables simultáneamente para determinar si existe alguna relación, asociación o dependencia entre ellas.
+
+Herramientas principales:
+
+	Tablas de Contingencia (o de doble entrada): Se usan principalmente para variables cualitativas (nominales u ordinales). Permiten ver cómo se cruzan las frecuencias de ambas categorías.
+	
+	Diagramas de Dispersión: Se usan para dos variables cuantitativas. Cada punto en el gráfico representa un par (x, y)
+	
+	Coeficiente de Correlación de Pearson (r): Mide la fuerza y la dirección de la relación lineal entre dos variables cuantitativas. Va de -1 a 1.
+
+r = 1: Correlación positiva perfecta.
+
+r = -1: Correlación negativa perfecta.r = 0: Ausencia de relación lineal.
+
+
+Regresión Lineal Simple: Un modelo matemático que intenta predecir el valor de una variable (y) en función de otra (x).
+
+\
+
+
 
 
 \chapter{Marco Metódico}
