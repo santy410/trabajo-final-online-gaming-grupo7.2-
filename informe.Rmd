@@ -86,8 +86,7 @@ Desde un punto de vista académico, este análisis aplica herramientas de proces
 \section{Objetivos}
  
 \subsection{Objetivo General}
-Analizar la relación entre el perfil demográfico (edad) y el comportamiento de juego (tiempo de sesión) para determinar su impacto en el nivel de compromiso (Engagement) del usuario según el genero de videojuego. 
-
+Analizar la relación entre el  rango de edad y  el tiempo de juego para determinar su impacto en el  Engagement del usuario según el género de videojuego.
 
 \begin{itemize}
 \item{}
