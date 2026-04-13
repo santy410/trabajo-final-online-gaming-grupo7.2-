@@ -59,30 +59,35 @@ def cargar_datos():
 df = cargar_datos()
 
 # 3. Título principal
-st.title("Análisis del Compromiso del Usuario según el Perfil Demográfico y el Género de Juego🕹️🎮")
+st.title("Análisis del Compromiso del Usuario según el rango de edad y el Género de Juego🕹️🎮")
 st.markdown("En este panel interactivo analizarás el comportamiento y la persistencia de los jugadores en entornos virtuales. A través de esta interfaz, explorarás la relación entre la edad del usuario y la duración de sus sesiones, identificando los géneros de videojuegos y los perfiles demográficos con mayores niveles de compromiso.")
  
 # Panel lateral izquierdo, filtro para la edad 
 
 with st.sidebar:
     st.header("Filtros de busqueda ⚙️")
-    st.write("Ajusta el rango de edad para poder actualizar los gráficos")
     
     # Filtro de Edad Rango 15 a 49
-    rango_edad = st.slider(
-        "Rango de Edad:",
-        min_value=15,
-        max_value=49,
-        value=(15, 49)
-    )
+    with st.expander("👤 Rango de Edad", expanded=True):
+        st.write("Ajusta la edad para actualizar los gráficos")
+        rango_edad = st.slider(
+            "Selecciona los años:",
+            min_value=15,
+            max_value=49,
+            value=(15, 49)
+        )
 
     # filtro de Género de Juego
-    opciones_genero = df['GameGenre'].unique().tolist()
-    seleccion_genero = st.multiselect(
-        "Géneros de Videojuegos:",
-        options=opciones_genero,
-        default=opciones_genero
-    )
+    with st.expander("👾 Género de Juego", expanded=False):
+        opciones_genero = df['GameGenre'].unique().tolist()
+        seleccion_genero = st.multiselect(
+            "Selecciona los géneros:",
+            options=opciones_genero,
+            default=opciones_genero
+        )
+
+    st.markdown("<br><br>", unsafe_allow_html=True)
+    st.info("👾 **Análisis hecho por:** \n\n Randy Conde y Santiago Hernandez")
 
   # filtrado de jugadores
 
@@ -90,7 +95,7 @@ edad_minima = rango_edad[0]
 edad_maxima = rango_edad[1]
 
 condicion_edad = (df["Age"] >= edad_minima) & (df["Age"] <= edad_maxima)
-condicion_genero = df["GameGenre"].isin(opciones_genero)
+condicion_genero = df["GameGenre"].isin(seleccion_genero)
 
 filtro_final = condicion_edad & condicion_genero
 
@@ -129,4 +134,3 @@ st.divider()
 # ponemos pestañas para organizar 
 lista_pestanas = ["📊 Gráficos Generales", "📈 Relaciones", "📂 Ver Tabla de Datos"]
 pestana1, pestana2, pestana3 = st.tabs(lista_pestanas)
-
