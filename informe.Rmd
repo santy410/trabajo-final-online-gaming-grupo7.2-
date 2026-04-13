@@ -1,10 +1,10 @@
 ---
 # --- Metadatos Básicos ---
-title: "Análisis del Compromiso del Usuario según el Perfil Demográfico y el Género de Juego"
+title: "Análisis del Compromiso del Usuario según la razon de edad  y el Género de Juego"
 author:
-   - santiago hernandez 31794175
-   - randy conde 32151653
-   - Tercer participante
+   - Santiago Hernandez CI:31794175
+   - Randy Conde CI:32151653
+  
 date: "Febrero 2026"
 
 # --- Metadatos Específicos de Plantilla ---
@@ -60,11 +60,12 @@ library(scales)
 Introducción del trabajo de investigación
 
 \chapter{Planteamiento del Problema}
-Describir planteamiento del problema\
 
-Argumento final. Debido a esto, se plantea las siguientes preguntas de investigación:En el análisis de datos modernos, el éxito de una plataforma de entretenimiento digital no se mide únicamente por la cantidad de usuarios registrados, si no por la cantidad de su interacción, fenómeno analizado mediante la medición de Engagement o nivel de compromiso. El dataset objeto de este estudio presenta una estructura integral que permite explorar como variables de distintas naturalezas (demográficas, temporales y categorías) coinciden para definir el comportamiento del consumidor.  
 
-El problema identificado para esta investigación surge de la necesidad de comprender los patrones que condicionan a la retención del usuario. A través de la observación de los datos disponibles, se percibe una complejidad propia: no existe una relación lineal evidente que explique por qué ciertos usuarios mantienen un compromiso alto mientras otros permanecen en niveles bajos. Surge entonces la interrogante de si factores biológicos y sociales, representados por la edad, o factores de intensidad operativa, como la duración promedio de las secciones, poseen un peso significativo en esta clasificación. Adicionalmente, se observa que la naturaleza del contenido, definida por el género del videojuego, actúa como un posible moderador de estas relaciones. Sin un análisis estadístico profundo, resulta difícil determinar si las sesiones de larga duración son una conducta ligada a la edad del jugador o si el tiempo de juego responde únicamente al tipo genero consumido. Esta incertidumbre representa un vacío en la interpretación de los datos que impide identificar con claridad como interactúan el perfil demográfico y el comportamiento temporal para general un nivel de compromiso alto, medio o bajo \
+En el análisis de datos modernos, el éxito de una plataforma de entretenimiento digital no se mide únicamente por la cantidad de usuarios registrados, si no por la cantidad de su interacción, fenómeno analizado mediante la medición de Engagement o nivel de compromiso. El dataset objeto de este estudio presenta una estructura integral que permite explorar como variables de distintas naturalezas (razón de edad , temporales y categorías) coinciden para definir el comportamiento del consumidor.
+El problema identificado para esta investigación surge de la necesidad de comprender los patrones que condicionan a la retención del usuario. A través de la observación de los datos disponibles, se percibe una complejidad propia: no existe una relación lineal evidente que explique por qué ciertos usuarios mantienen un compromiso alto mientras otros permanecen en niveles bajos. Surge entonces la interrogante de si factores biológicos y sociales, representados por la edad, o factores de intensidad operativa, como la duración promedio de las secciones, poseen un peso significativo en esta clasificación. Adicionalmente, se observa que la naturaleza del contenido, definida por el género del videojuego, actúa como un posible moderador de estas relaciones. Sin un análisis estadístico profundo, resulta difícil determinar si las sesiones de larga duración son una conducta ligada a la edad del jugador o si el tiempo de juego responde únicamente al tipo genero consumido. Esta incertidumbre representa un vacío en la interpretación de los datos que impide identificar con claridad como interactúan el rango de edad y el comportamiento temporal para generar un nivel de compromiso alto, medio o bajo.
+
+ \
 
 
 
@@ -75,11 +76,11 @@ El problema identificado para esta investigación surge de la necesidad de compr
 \textbf{3.}	¿Cómo se distribuyen proporcionalmente los niveles de lealtad y retención dentro de cada género de videojuego, y qué segmentos presentan la mayor fidelidad?	\
 
 
+
 \section{Justificación}
 
 La importancia de este estudio se establece en la necesidad de transformar los datos acumulados en información que sea fácil de interpretar y útil para la toma de decisiones. En lugar de observar números aislados, este trabajo busca de aplicar las herramientas de computación y estadística para identificar patrones de comportamiento. Se busca entender cómo se relacionan variables como la edad y el tiempo de juego es el primer paso para organizar grandes volúmenes de datos y extraer conclusiones lógicas sobre u grupo de personas.
-
-Desde un punto de vista académico, este análisis aplica herramientas de procesamiento de datos para identificar patrones de comportamiento. Desde una perspectiva práctica, los resultados permitirán segmentar a los jugadores de manera eficiente, optimizando el diseño de los videojuegos para que se ajusten a las capacidades y tiempos de cada rango de edad, garantizando así un nivel de compromiso optimo que asegure la permanencia del usuario en el tiempo. 
+Desde un punto de vista académico, este análisis aplica herramientas de procesamiento de datos para identificar patrones de comportamiento. Desde una perspectiva práctica, los resultados permitirán segmentar a los jugadores de manera eficiente, optimizando el diseño de los videojuegos para que se ajusten a las capacidades y tiempos de cada rango de edad, garantizando así un nivel de compromiso optimo que asegure la permanencia del usuario en el tiempo.
 \
 
 \section{Objetivos}
@@ -89,14 +90,15 @@ Analizar la relación entre el perfil demográfico (edad) y el comportamiento de
 
 
 \begin{itemize}
-  \item{Describir objetivo general del trabajo de investigación}
+\item{}
 \end{itemize}
 
 \subsection{Objetivos Específicos}
 \begin{itemize}
-  \item{	Identificar el perfil demográfico y de consumo de los jugadores mediante mediadas de tendencia central y dispersión. }
-  \item{	Comparar el tiempo promedio de sesión y la edad media entre los distintos niveles de compromiso (Engagement level).}
-  \item{	Determinar la distribución de los niveles de compromiso dentro de cada genero de videojuego para identificar los segmentos de mayor fidelidad. (retención, lealtad )}
+  \item{		Identificar el perfil demográfico y de consumo de los jugadores mediante mediadas de tendencia central y dispersión. }
+  \item{	Comparar el tiempo promedio de sesión y la edad media entre los distintos  Engagement level}
+  \item{		Determinar la distribución de los niveles de engagement dentro de cada genero de videojuego para identificar los segmentos de mayor fidelidad. } 
+   \item{	Evaluar la relación entre la edad del jugador y la duración de sus sesiones para determinar si el factor generacional influye en la permanencia dentro de los diferentes géneros de juego.} 
 \end{itemize}
 
 
@@ -133,86 +135,13 @@ Describir la fuente y el Periodo de Referencia utilizado en el trabajo de invest
 
 \section{Variables}
 
-Describir la variable en estudio en el trabajo de investigación
+Describir la variable en estudio en el trabajo de investigación 
 
-\chapter{2.1   En este capítulo se presentan las bases y conceptos necesarios para iniciar el análisis estadístico de conjuntos de datos de videojuegos en línea. Se especifican las técnicas de la estadística descriptiva y las herramientas computacionales que nos puedan facilitar transformar los registros brutos en información útil para comprender el compromiso con el usuario.  
+\chapter{marco teorico 
 
- 2.2   ENGAGEMENT: El engagement es el nivel de compromiso, interacción y conexión emocional que los usuarios tienen con una marca o contenido, yendo más allá de simples medidas como seguidores. Se mide a través de interacciones activas (likes, comentarios, compartidos, guardados) y tiempo de permanencia, convirtiendo seguidores pasivos en embajadores de marca. siendo una medida fundamental para evaluar el éxito de las estrategias de marketing digital. (Alto medio bajo)
-
-  2.3   GENERO DE JUEGO: En un género de es una clasificación que agrupa títulos con características de jugabilidad, mecánicas y objetivos similares, independientemente de su temática o estética. Define la experiencia del jugador cómo interactúa con el mundo Los géneros permiten identificar rápidamente el tipo de desafío, y a menudo los juegos modernos combinan varios de ellos.
-
-2.4    GENERO DE JUEGOS QUE HAY EN EL DATASET: 
-
-2.4.1   Strategy (estrategia): El género de estrategia en los videojuegos se define por priorizar el pensamiento táctico, la planificación y la gestión de recursos sobre los reflejos rápidos o la fuerza bruta. El objetivo principal suele ser superar a un oponente  mediante una toma de decisiones superior 
+ }
 
 
-2.4.2   Sports (deportes): Un juego de deporte es un género de videojuegos que simula la práctica de deportes físicos, ya sean tradicionales o ficticios. A diferencia de otros géneros, su mecánica principal se basa en replicar las reglas, el entorno y la competitividad de una disciplina deportiva real.
-
-2.4.3   Action (acción): Un juego de acción es un género que se centra fundamentalmente en desafíos físicos que requieren reflejos, coordinación ojo-mano y velocidad de reacción. A diferencia de los juegos de estrategia, aquí el progreso depende de tu habilidad para responder rápidamente a los eventos que ocurren en la pantalla.
-
-2.4.4    RPG (role-playing game): Los RPG (Role-Playing Games) o juegos de rol son un género donde el jugador toma el control de un personaje (o un grupo de ellos) que vive en un mundo detallado. A diferencia de los juegos de pura acción, aquí lo más importante es la progresión, la narrativa y la toma de decisiones.
-La esencia de un RPG es que tu personaje "crece": empieza siendo débil y, a través de la experiencia, se vuelve más poderoso y especializado.
-
-2.4.5   Simulation (simulación): Un juego de simulación es un género diseñado para recrear aspectos de la vida real de la forma más fiel posible. El objetivo no es siempre "ganar" en el sentido tradicional, sino experimentar una actividad, una profesión o una situación con un nivel de detalle técnico y mecánico muy alto. 
-
-2.5 TIEMPO DE SESION:  El tiempo de sesión (o session time) es una métrica que mide la duración total de una única interacción continua de un usuario con un videojuego o aplicación. Comienza desde que abres el programa y termina cuando lo cierras o dejas de interactuar con él por un periodo prolongado.
-
-2.6   ESTADISTICA DESCRIPTIVA UNIVARIANTE Y BIBARIANTE: 
-
-2.6.1   Estadística Descriptiva Univariante
-Se centra en el análisis de una sola variable de forma aislada. Su objetivo es describir las características de esa variable sin considerar su relación con otras.
-2.6.2  Herramientas principales:
-            2.6.2.1 Medidas de Tendencia Central: Buscan el centro de los datos.
-
-                          2.6.2.2 Media: El promedio aritmético.
-
-2.6.2.3 Mediana: El valor central cuando los datos están ordenados.
-
-2.6.2.4 Moda: El valor que más se repite.
-
-2.6.3	Medidas de Dispersión: Indican qué tan alejados están los datos del centro.
-
-2.6.3.1 Varianza: Promedio de los cuadrados de las desviaciones.
-2.6.3.2 Desviación estándar: Raíz cuadrada de la varianza (indica dispersión en las unidades originales).
-
-2.6.3.3	Rango: Diferencia entre el valor máximo y el mínimo.
-
-2.6.4	Medidas de Forma y Posición:
-
-2.6.4.3	Cuartiles y Percentiles: Dividen la distribución en partes iguales.
-
-2.6.4.2 Asimetría y Curtosis: Describen si la distribución es "estirada" hacia un lado o qué tan "puntiaguda" es.
-
-________________________________________
-2.7	Estadística Descriptiva Bivariante
-
-Se encarga de analizar dos variables simultáneamente para determinar si existe alguna relación, asociación o dependencia entre ellas.
-
-2.7.1 Herramientas principales:
-
-2.7.1.1	Tablas de Contingencia (o de doble entrada): Se usan principalmente para variables cualitativas (nominales u ordinales). Permiten ver cómo se cruzan las frecuencias de ambas categorías.
-
-2.7.1.2	Diagramas de Dispersión: Se usan para dos variables cuantitativas. Cada punto en el gráfico representa un par (x, y)
-
-2.7.1.3	Coeficiente de Correlación de Pearson (r): Mide la fuerza y la dirección de la relación lineal entre dos variables cuantitativas. Va de -1 a 1.
-
-
-2.7.1.4	 r = 1: Correlación positiva perfecta.
-
-2.7.1.5	 r = -1: Correlación negativa perfecta.r = 0: Ausencia de relación lineal.
-
-
-2.9	Regresión Lineal Simple: Un modelo matemático que intenta predecir el valor de una variable (y) en función de otra (x).
-
-
-
-  
-
-
-
-
-  
-}
 
 
 \section{Bases Teóricas}
