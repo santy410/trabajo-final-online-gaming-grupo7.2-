@@ -151,7 +151,7 @@ En este capítulo se presentan las bases y conceptos necesarios para iniciar el 
 
 \subsection{Juegos Online}
 
-JUEGOS ONLNE: Los juegos online son videojuegos que requieren conexión a internet para funcionar, permitiendo a personas de distintos lugares interactuar simultáneamente en partidas compartidas. Funcionan mediante arquitectura cliente-servidor, enviando datos en tiempo real entre los jugadores y servidores \
+JUEGOS ONLINE: Los juegos online son videojuegos que requieren conexión a internet para funcionar, permitiendo a personas de distintos lugares interactuar simultáneamente en partidas compartidas. Funcionan mediante arquitectura cliente-servidor, enviando datos en tiempo real entre los jugadores y servidores \
 
 \subsection{Como Trabajan Los Jusgos Online}
 
