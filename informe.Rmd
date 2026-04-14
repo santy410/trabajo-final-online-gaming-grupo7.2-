@@ -32,11 +32,8 @@ output:
     citation_package: natbib       # Importante: forzar natbib porque tu plantilla lo usa
 
 # --- Resumen (Abstract) ---
-abstract:
+abstract: | 
   La investigación utiliza un conjunto de datos que abarca diversos géneros (Estrategia, Deportes, Acción, RPG y Simulación) para evaluar la relación entre el rango de edad de los jugadores y la duración de sus sesiones de juego. Mediante el uso de medidas de tendencia central, dispersión y análisis de correlación, se busca identificar patrones de comportamiento que permitan segmentar a los usuarios según su nivel de compromiso (Alto, Medio o Bajo). Los resultados pretenden aportar una base lógica para optimizar el diseño de juegos y mejorar la persistencia del usuario, transformando datos brutos en información estratégica para la toma de decisiones en el sector del entretenimiento digital.    
-
-
-
 ---
 
 ```{r setup, include=FALSE}
@@ -109,21 +106,9 @@ Analizar la relación entre el  rango de edad y  el tiempo de juego para determi
 
 
 
-\begin{table}[ht]
-\centering
-\caption{Variables consideradas} 
-\resizebox{10cm}{!} {
-\begin{tabular}{ccc}
-  \hline
-\ \ \ \ \ NOMBRE DE LA VARIABLE \\ 
-  \hline
-   VARIABLE 1 \\ 
-VARIABLE 2\\ 
-VARIABLE n\\ 
-   \hline
-\end{tabular}
-}
-\end{table}
+
+
+
 
 
 
