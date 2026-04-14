@@ -131,11 +131,11 @@ else:
 st.divider()
 
 # ....pestañas....
-lista_pestanas = ["📊 Análisis de Medias", "📈 Relaciones", "📍Relacion edad-tiempo de session" ,"📂 Ver Tabla de Datos"]
+lista_pestanas = ["📊 Análisis de Medias", "📈 Distribución", "📍Relación edad-tiempo de sesión" ,"📂 Ver Tabla de Datos"]
 pestana1, pestana2, pestana3, pestana4 = st.tabs(lista_pestanas)
 
 # definimos paleta de colores 
-mis_colores = ["#1f77b4", "#FF5100", "#003366", "#beee62", "#70ae6e"]
+mis_colores = ["#1f77b4", "#30CE6D", "#003366", "#beee62", "#70ae6e"]
 
 
 #....PRIMERA PESTAÑA....
@@ -170,7 +170,7 @@ with pestana1:
                     y='Resultado',
                     color='Métrica Analizada',
                     barmode='group',
-                    color_discrete_sequence=["#4587c5", "#8C00FF"],
+                    color_discrete_sequence=["#208aa5", "#30CE6D"],
                     labels={'Resultado': 'Valor de la Media'}
                 )
                 
@@ -181,11 +181,11 @@ with pestana1:
             with st.container(border=True):
                 st.markdown("### 📝 Análisis")
                 st.write("""
-        En este bloque comparamos dos medidas de tendencia central, para entender cómo varían los hábitos según la fidelidad del jugador.
+        En este apartado comparamos dos medidas de tendencia central, para entender cómo varía el perfil de consumo.
         
         **Observaciones clave:**
         * **Tiempo de Juego (Azul):** Existe una diferencia bastante clara; a mayor compromiso (*High*), el tiempo promedio de sesión aumenta notoriamente. Esto valida que la retención está ligada a la duración de las partidas.
-        * **Edad Media (Morado):** Notamos que la edad se mantiene bastante estable en todos los niveles. 
+        * **Edad Media (Verde):** Notamos que la edad se mantiene bastante estable en todos los niveles. 
         
         **Conclusión:** El compromiso en este dataset parece estar más influenciado por la disponibilidad de tiempo para jugar que por un factor de edad.
         """)
@@ -195,12 +195,12 @@ with pestana1:
 #....SEGUNDA PESTAÑA....
 
 with pestana2:
-    st.subheader("Composición Relativa del Nivel de Compromiso por Categoría de Juego")
+    st.subheader("Distribución del Nivel de Compromiso  por Categoría de Juego")
     col_graf3, col_txt3 = st.columns([7, 3])
 
     with col_graf3:
         with st.container(border=True):
-            st.markdown("### 📊 Análisis de Segmentación")
+            st.markdown("### 📊 Comportamiento de los niveles de Engagement")
             df_obj3_counts = df_filtrado.groupby(['GameGenre', 'EngagementLevel']).size().reset_index(name='Cantidad')
             
 #hacemos el grafico
@@ -213,13 +213,42 @@ with pestana2:
     with col_txt3:
         with st.container(border=True):
             st.markdown("### 📊 Análisis")
-            st.write("""
-Al observar la **composición interna** de las barras, se identifica una **distribución notablemente homogénea** del compromiso en todos los géneros.
+            st.success("""
+Al observar el grafico, se identifica una **distribución notablemente homogénea** del compromiso en todos los géneros.
 
-**Hallazgos estadísticos:**
-* No se aprecia un género que domine claramente en lealtad; tanto *Action* como *Strategy* mantienen proporciones similares de usuarios 'High'.
+* No se aprecia un género que domine claramente; tanto *Action* como *Strategy* mantienen proporciones similares de usuarios en el nivel de engagement 'High'.
 *Esto sugiere que el género del videojuego no es el factor principal que determina el nivel de compromiso del usuario.
 
                      """)
+
+#.... pestaña numero 3....
+
+with pestana3:
+    st.subheader("Analisis de tendencia: Edad vs. Tiempo de juego por sesion")
+
+    col_graf3, col_txt3= st.columns([7, 3])    
+
+    with col_graf3:
+        #agrupamos por edad para obtener un promedio en el tiempoo por sesion             
+        df_promedio = df_filtrado.groupby('Age')['AvgSessionDurationMinutes'].mean().reset_index()
         
-            
+        #Hacemos el grafico de linea 
+        fig_obj4 = px.line(
+            df_promedio,
+            x= "Age",
+            y= "AvgSessionDurationMinutes",
+            title= "Evolución del Tiempo Promedio de Sesión por Año de Edad",
+            labels= {'Age': 'Edad del Jugador', 'AvgSessionDurationMinutes': 'Minutos Promedio'},
+            markers= True
+        )
+
+         #colocamos el color
+        fig_obj4.update_traces(line_color="#1fb487", line_width=3)
+
+        st.plotly_chart(fig_obj4, use_container_width=True)
+
+    with col_txt3:
+        st.success("\nEn este gráfico podemos ver cómo cambia la permanencia en el juego a medida que el rango de edad aumenta. \n\nAl no tomar en cuenta las otras variable podemos ver que No existe una relación lineal fuerte entre la edad y el tiempo")
+
+
+        
