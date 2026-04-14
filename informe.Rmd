@@ -59,6 +59,17 @@ library(scales)
 
  El estudio analiza la transición de las plataformas digitales hacia ecosistemas basados en el engagement como métrica clave de éxito. Mediante un enfoque que combina computación y estadística descriptiva, la investigación busca determinar si factores como la edad del jugador o el género del videojuego influyen en la duración de las sesiones y la persistencia del usuario. El objetivo final es transformar datos brutos en perfiles de comportamiento que permitan diseñar experiencias personalizadas y garantizar la sostenibilidad del producto mediante evidencia 
  
+ \section*{Estructura Del Informe}
+ \begin{itemize}
+
+  \item \textbf{Capítulo I}
+  \item \textbf{Capítulo II}
+  \item \textbf{Capítulo III}
+  \item \textbf{Capítulo IV}
+  \item \textbf{Capítulo V}
+\end {itemize}
+
+
 
 \chapter{Planteamiento del Problema}
 
@@ -155,57 +166,112 @@ La esencia de un RPG es que tu personaje "crece": empieza siendo débil y, a tra
 
 TIEMPO DE SESION:  El tiempo de sesión (o session time) es una métrica que mide la duración total de una única interacción continua de un usuario con un videojuego o aplicación. Comienza desde que abres el programa y termina cuando lo cierras o dejas de interactuar con él por un periodo prolongado.
 \
- \subsection{Estadistica Descrictiva y Bivariante}
-    ESTADISTICA DESCRIPTIVA UNIVARIANTE Y BIBARIANTE: 
+ \subsection{Estadistica Descrictiva univariante }
+\begin{itemize}
 
-Estadística Descriptiva Univariante
-Se centra en el análisis de una sola variable de forma aislada. Su objetivo es describir las características de esa variable sin considerar su relación con otras.
+  \item \textbf{Estaditica Univariante  },Estadística Univariante. La estadística descriptiva está constituida por un conjunto de técnicas cuyo objetivo es clasificar, presentar, describir, resumir y analizar los datos relativos a una o más características de los individuos de una población, a partir de la información sobre todos y cada uno de ellos. \
+   \item \textbf{Medidas de tendencia central},: Las medidas de tendencia central son fundamentales en el análisis estadístico para identificar el valor que representa el centro de un conjunto de datos.
+En ocasiones hay que analizar variables que presentan muchos datos diferentes. En este tipo de situaciones es preferible calcular cantidades que ofrezcan la información resumida sobre la materia, como sucede con las medidas de tendencia central. 
+Existen diversos tipos de medidas de tendencia central estadística. La media, mediana y moda son las más empleadas; se analizan a continuación\ 
 
- Herramientas principales:
+  \item \textbf{Media aritmetica},:     Este dato es ampliamente usado en estadística. Es la cantidad que se obtiene al sumar todos los datos de un conjunto de valores para posteriormente dividir la cifra obtenida entre la cantidad de valores analizados. El resultado se expresa en la misma unidad que los datos originales: metros, litros, gramos, horas, etc.
+•  $$\bar{x} = \frac{\sum_{i=1}^{n} x_i}{n}$$ 
+ \ 
+ \item \textbf{Mediana },Es el dato estadístico que ocupa la posición central en un conjunto de datos cuando estos se organizan en orden de magnitud, dejando la misma cantidad de valores a un lado y al otro. Si $n$ es impar: La mediana es el valor que está justo en medio.
+$$\text{Mediana} = \frac{x_{\left(\frac{n}{2}\right)} + x_{\left(\frac{n}{2} + 1\right)}}{2}$$
+
+•	Mediana para datos impares.
+Obtener la mediana con una cantidad de datos impares es muy sencillo. En primer lugar, todas las cifras se deben ordenar de forma ascendente antes de localizar el centro del conjunto. La mediana será el número que se encuentre exactamente en el medio, de tal forma que el número de datos ubicados a la derecha y a la izquierda de la mediana será exactamente igual.
+Ejemplo: En el conjunto de datos ya ordenado de los números 1, 3, 5, 8, 10, 13, 15, la mediana será 8, puesto que divide el conjunto en dos partes iguales.
+$$\text{Mediana} = x_{\left(\frac{n+1}{2}\right)}$$ 
+\ 
+ \item \textbf{moda},La moda es la variable que más se repite en un conjunto de datos o muestra poblacional. Una muestra puede presentar más de una moda. No hay una forma específica para obtener esta información, solamente hay que verificar cuál es el resultado que más se repite.\ 
  
- Medidas de Tendencia Central: Buscan el centro de los datos
+ \item \textbf{Medidas de dispercion},son esenciales porque nos indican qué tan heterogéneos son nuestros datos. Mientras que las medidas de tendencia central nos dicen dónde está el "centro", las de dispersión nos dicen qué tan confiable es ese centro.\ 
  
-  Media: El promedio aritmético
-  
-  Mediana: El valor central cuando los datos están ordenados.
-  
-  Moda: El valor que más se repite.
-  
-  Medidas de Dispersión: Indican qué tan alejados están los datos del centro.
-  
-  Varianza: Promedio de los cuadrados de las desviaciones.
-  
-Desviación estándar: Raíz cuadrada de la varianza (indica dispersión en las unidades originales).
-
-Rango: Diferencia entre el valor máximo y el mínimo.
-
+ \item \textbf{rango},: es la medida de dispersión más sencilla en estadística. Indica la distancia total entre el valor más pequeño y el valor más grande de un conjunto de datos
+$$R = Max - Min$$ 
+\ 
+ \item \textbf{Varianza},Es el promedio de los cuadrados de las desviaciones de cada dato respecto a la media aritmética. Cuantifica la variabilidad global. Al elevar las diferencias al cuadrado, se asegura que todas sean positivas y se penalizan más las desviaciones grandes.
+•	$$s^2 = \frac{\sum_{i=1}^{n} (x_i - \bar{x})^2}{n-1}$$ 
+•	$$s^2 = \frac{\sum_{i=1}^{n} (x_i - \bar{x})^2}{n-1}$$
+\ 
+ \item \textbf{desviacion estandar},Es la medida de dispersión más utilizada porque devuelve la variabilidad a las mismas unidades que los datos originales (por ejemplo, si mides metros, la varianza da metros cuadrados, pero la desviación estándar vuelve a dar metros). 
+$$s = \sqrt{s^2}$$
+\ 
+ \item \textbf{coeficiente de variacion},Es fundamental para comparar la variabilidad entre dos conjuntos de datos que tienen unidades distintas o promedios muy diferentes (por ejemplo, comparar el peso de elefantes contra el de hormigas).  
+$$CV = \left( \frac{s}{|\bar{x}|} \right) \times 100\%$$
+\ 
+ \item \textbf{Medidas de posicion }, son estadísticos que permiten dividir un conjunto de datos ordenados en intervalos iguales, permitiendo conocer qué lugar ocupa un valor específico dentro de la distribución total. \ 
  
- Medidas de Forma y Posición:
+ \item \textbf{cuartiles},Son los tres valores que dividen un conjunto de datos ordenados en cuatro partes iguales, cada una representando el 25% de la muestra.
  
-Cuartiles y Percentiles: Dividen la distribución en partes iguales.
+•	$Q_1$ (Primer Cuartil): Deja por debajo al 25% de los datos.
 
-Asimetría y Curtosis: Describen si la distribución es "estirada" hacia un lado o qué tan "puntiaguda" es.
+•	$Q_2$ (Segundo Cuartil): Deja por debajo al 50% de los datos (coincide con la Mediana).
 
-Estadística Descriptiva Bivariante
+•	$Q_3$ (Tercer Cuartil): Deja por debajo al 75% de los datos.
 
-Se encarga de analizar dos variables simultáneamente para determinar si existe alguna relación, asociación o dependencia entre ellas.
+•	Fórmula de posición: $Pos = \frac{k \cdot (n+1)}{4}$ (donde $k=1, 2, 3$).
+\ 
+\item \textbf{deciles},Son los nueve valores que dividen la serie de datos en diez partes iguales, cada una representando el 10% de los datos.
+Son muy útiles en estudios socioeconómicos para clasificar ingresos o rendimientos académicos por grupos de 10%. El $D_5$ equivale a la Mediana.
+ $Pos = \frac{k \cdot (n+1)}{10}$ (donde $k=1, 2, \dots, 9$). \ 
+ 
+ \item \textbf{percentiles}, Son los 99 valores que dividen los datos en cien partes iguales, cada una representando el 1% de la muestra.  
+ Es la medida de posición más precisa. Se usa comúnmente en pediatría (tablas de crecimiento) y en pruebas estandarizadas. Decir que estás en el percentil 90 significa que superas al 90% de la población evaluada.
+$Pos = \frac{k \cdot (n+1)}{100}$ (donde $k=1, 2, \dots, 99$  
+\ 
+ \item \textbf{medidas de fromay distribucion},: permiten conocer cómo se reparten los datos alrededor de la media sin necesidad de ver un gráfico. Nos dicen si la curva es simétrica y qué tan "puntiaguda" o "aplastada" es.  \ 
+ 
+ \item \textbf{asimetria},Indica si los datos se distribuyen de forma uniforme a ambos lados de la media.
+•	Asimetría Negativa: La cola de la distribución se alarga hacia la izquierda (valores bajos).
+•	Simétrica: Existe la misma cantidad de datos a la derecha e izquierda de la media.
+•	Asimetría Positiva: La cola se alarga hacia la derecha (valores altos).
+Coeficiente de Asimetría de Fisher ($g_1$)
+Es la fórmula más utilizada, basada en el tercer momento central:
+$$g_1 = \frac{\frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})^3}{s^3}$$  
+\ 
+ \item \textbf{curtosis},mide qué tan escarpada o achatada está la curva de la distribución en comparación con una distribución normal.
+•	Leptocúrtica ($g_2 > 0$): Muy puntiaguda, los datos están muy concentrados en el centro.
+•	Mesocúrtica ($g_2 = 0$): Distribución normal estándar.
+•	Platicúrtica ($g_2 < 0$): Muy achatada, los datos están más dispersos hacia los extremos.
+Coeficiente de Curtosis de Fisher ($g_2$)
+Se basa en el cuarto momento central y se le resta 3 para compararlo con la normal:
+$$g_2 = \frac{\frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})^4}{s^4} - 3$$
+   
 
-Herramientas principales:
+ Momentos de distribucion  : Son valores que ayudan a caracterizar la forma de una distribución. Los más comunes son los momentos respecto a la media:
+$$m_k = \frac{\sum (x_i - \bar{x})^k}{n}$$ 
 
-	Tablas de Contingencia (o de doble entrada): Se usan principalmente para variables cualitativas (nominales u ordinales). Permiten ver cómo se cruzan las frecuencias de ambas categorías.
-	
-	Diagramas de Dispersión: Se usan para dos variables cuantitativas. Cada punto en el gráfico representa un par (x, y)
-	
-	Coeficiente de Correlación de Pearson (r): Mide la fuerza y la dirección de la relación lineal entre dos variables cuantitativas. Va de -1 a 1.
-
-r = 1: Correlación positiva perfecta.
-
-r = -1: Correlación negativa perfecta.r = 0: Ausencia de relación lineal.
+•	Primer momento ($k=1$): Siempre es 0.
+•	Segundo momento ($k=2$): Es la Varianza.
+•	Tercer momento ($k=3$): Se usa para la Asimetría.
+•	Cuarto momento ($k=4$): Se usa para la Curtosis. 
+\ 
+      
+\end {itemize}
 
 
-Regresión Lineal Simple: Un modelo matemático que intenta predecir el valor de una variable (y) en función de otra (x).
+\subsection{Estadistica Descrictiva bivariante}
 
-\
+\begin{itemize}
+
+  \item \textbf{estadistica descrictiva bivariante},Este bloque busca entender si, cuando una variable aumenta, la otra también lo hace (relación directa) o si disminuye (relación inversa).\ 
+  
+  \item \textbf{covarianza},Es una medida que indica el sentido de la variación común entre dos variables cuantitativas. Nos dice si las variables crecen o decrecen de forma conjunta. Explicación: Si la mayoría de los puntos están por encima de sus respectivas medias al mismo tiempo, la covarianza será positiva. Si cuando una es mayor que su media, la otra es menor, será negativa. Su principal problema es que el resultado depende de las unidades de medida (por ejemplo, si mides en metros o centímetros, el número cambia), lo que dificulta saber si la relación es "fuerte" o "débil".
+  $$S_{xy} = \frac{\sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y})}{n}$$\ 
+  
+  \item \textbf{coeficiente de correlacio de pearson},Es un índice que mide la fuerza y la dirección de la relación lineal entre dos variables. A diferencia de la covarianza, este coeficiente no tiene unidades y está acotado. 
+  Explicación: Sus valores van de $-1$ a $+1$.Si $r = 1$, hay una relación lineal positiva perfecta.Si $r = -1$, hay una relación lineal negativa perfecta.Si $r = 0$, no existe relación lineal (aunque podría haber otro tipo de relación, como curva).Es la medida más utilizada para saber si dos fenómenos están conectados numéricamente.
+  $$r = \frac{S_{xy}}{S_x \cdot S_y}$$(Donde $S_x$ y $S_y$ son las desviaciones típicas de cada variable).\ 
+  \item \textbf{Recta de Regresión Lineal},Si existe una relación fuerte, podemos intentar predecir el valor de una variable ($Y$) en función de la otra ($X$). La ecuación de la recta de mínimos cuadrados es:$$y = a + bx$$Donde:
+  
+  Pendiente ($b$): $b = \frac{S_{xy}}{S_x^2}$ 
+  
+  Intercepto ($a$): $a = \bar{y} - b\bar{x}$\ 
+
+\end {itemize}
 
 
 
