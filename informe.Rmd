@@ -1,6 +1,6 @@
 ---
 # --- Metadatos Básicos ---
-title: "Análisis del Compromiso del Usuario según la razon de edad  y el Género de Juego"
+title: "Análisis del Compromiso del Usuario según el rango de edad  y el Género de Juego"
 author:
    - Santiago Hernandez CI:31794175
    - Randy Conde CI:32151653
