@@ -104,16 +104,6 @@ Analizar la relación entre el  rango de edad y  el tiempo de juego para determi
 
 
 
-
-
-
-
-
-
-
-
-
- 
  
 \section{Periodo de Referencia}
 
@@ -125,9 +115,6 @@ Describir la variable en estudio en el trabajo de investigación
 
 \chapter{marco teorico
  }
-
-
-
 
 \section{Bases Teóricas}
 
