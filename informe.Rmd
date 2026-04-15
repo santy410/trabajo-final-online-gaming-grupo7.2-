@@ -204,14 +204,13 @@ $$CV = \left( \frac{s}{|\bar{x}|} \right) \times 100\%$$
 
 \subsection{Estadistica Descrictiva bivariante}
 
+Este bloque busca entender si, cuando una variable aumenta, la otra también lo hace (relación directa) o si disminuye (relación inversa).\ 
 \begin{itemize}
-
-  \item \textbf{estadistica descrictiva bivariante},Este bloque busca entender si, cuando una variable aumenta, la otra también lo hace (relación directa) o si disminuye (relación inversa).\ 
   
-  \item \textbf{covarianza},Es una medida que indica el sentido de la variación común entre dos variables cuantitativas. Nos dice si las variables crecen o decrecen de forma conjunta. Explicación: Si la mayoría de los puntos están por encima de sus respectivas medias al mismo tiempo, la covarianza será positiva. Si cuando una es mayor que su media, la otra es menor, será negativa. Su principal problema es que el resultado depende de las unidades de medida (por ejemplo, si mides en metros o centímetros, el número cambia), lo que dificulta saber si la relación es "fuerte" o "débil".
+  \item \textbf{Covarianza}: Es una medida que indica el sentido de la variación común entre dos variables cuantitativas. Nos dice si las variables crecen o decrecen de forma conjunta. Explicación: Si la mayoría de los puntos están por encima de sus respectivas medias al mismo tiempo, la covarianza será positiva. Si cuando una es mayor que su media, la otra es menor, será negativa. Su principal problema es que el resultado depende de las unidades de medida (por ejemplo, si mides en metros o centímetros, el número cambia), lo que dificulta saber si la relación es "fuerte" o "débil".
   $$S_{xy} = \frac{\sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y})}{n}$$\ 
   
-  \item \textbf{coeficiente de correlacio de pearson},Es un índice que mide la fuerza y la dirección de la relación lineal entre dos variables. A diferencia de la covarianza, este coeficiente no tiene unidades y está acotado. 
+  \item \textbf{Coeficiente de correlacion de pearson}: Es un índice que mide la fuerza y la dirección de la relación lineal entre dos variables. A diferencia de la covarianza, este coeficiente no tiene unidades y está acotado. 
   Explicación: Sus valores van de $-1$ a $+1$.Si $r = 1$, hay una relación lineal positiva perfecta.Si $r = -1$, hay una relación lineal negativa perfecta.Si $r = 0$, no existe relación lineal (aunque podría haber otro tipo de relación, como curva).Es la medida más utilizada para saber si dos fenómenos están conectados numéricamente.
   $$r = \frac{S_{xy}}{S_x \cdot S_y}$$(Donde $S_x$ y $S_y$ son las desviaciones típicas de cada variable).\ 
   \item \textbf{Recta de Regresión Lineal},Si existe una relación fuerte, podemos intentar predecir el valor de una variable ($Y$) en función de la otra ($X$). La ecuación de la recta de mínimos cuadrados es:$$y = a + bx$$Donde:
@@ -223,10 +222,9 @@ $$CV = \left( \frac{s}{|\bar{x}|} \right) \times 100\%$$
 \end {itemize}
 
 
-
-
 \chapter{Marco Metódico}
-En esta sección se presentan las metodologías y/o test necesarios relacionados con la práctica divulgada en el marco teórico, así como las fuentes de datos.
+En este capítulo se desarolla el proceso de selección de aquellos registros necesarios para cumplir con los objetivos planteados. Para esto se hará uso de herramientas para el análisis de datos como R y Pandas (librería de Python).\
+
  
 \section{Bases metódicas utilizadas en el trabajo de investigación}
 
