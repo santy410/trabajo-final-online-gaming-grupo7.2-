@@ -63,10 +63,12 @@ library(scales)
  \begin{itemize}
 
   \item \textbf{Capítulo I}
+   En este capítulo se define el enfoque y propósito del estudio. Los objetivos y preguntas de investigación, contexto, en la industria del gaming, la retención es un factor crítico de éxito. La problemática se centra en la dificultad saber el compromiso de los jugadores basados en el dataset
   \item \textbf{Capítulo II}
-  \item \textbf{Capítulo III}
-  \item \textbf{Capítulo IV}
-  \item \textbf{Capítulo V}
+  El Marco Teórico Se establecen las bases teóricas para abordar el problema. Se definen conceptos primordiales para abordar la investigación. Asimismo, se detallan las técnicas estadísticas para llevar a cabo el trabajo de investigación
+  \item \textbf{Capítulo III}Metodología Se describe el proceso técnico de manejo de datos para cumplir los objetivos planteados
+  \item \textbf{Capítulo IV}Análisis de Resultados Aquí se exponen los hallazgos respondiendo a las preguntas del Capítulo I. utilizando gráficos, tablas de frecuencia y análisis de correlación. 
+  \item \textbf{Capítulo V} Conclusiones y Recomendaciones Se indican los resultados finales del análisis del trabajo investigativo
 \end {itemize}
 
 
@@ -395,14 +397,16 @@ print(paste("El coeficiente de correlación de Pearson es:", round(correlacion, 
 
 ```
 
+Para determinar si el factor generacional influye en la permanencia, se calculo el Coeficiente de correlacion de Pearson, obteniendo un resultado de -0,0023 casi igual a cero, indica una correlacion nula en las variables. Se concluye que la edad del jugador no tiene un efecto directo ni inverso sobre la duración de las sesiones de juego
+
 
 
 \chapter{Conclusiones y Recomendaciones}
 
-\textbf{1.-} Conclusion 1 del trabajo de investigación.\
+\textbf{1.-} Mediante esta investigacion nos hemos dado cuenta que que los videojuegos no necesariamente tienen que ir ligados a la edad, sabiendo que nuestro promedio es de 31.99 años, los datos nos dicen que no importa si tienes 18 o 50 esto no influye en cuanto tiempo le dedicas a jugar, en los graficos de caja nos muestra que un adulto mayor puede estar enganchando igual que un joven, por ende el interes depende del juego\
 
 \textbf{Recomendación} 
-Recomendación 1 del trabajo de investigación.\
+\
 
 \textbf{2.-} Conclusion 2 del trabajo de investigación.\
 
