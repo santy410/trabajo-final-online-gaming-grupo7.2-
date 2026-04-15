@@ -278,7 +278,32 @@ media_sesion <- mean(og$AvgSessionDurationMinutes, na.rm = TRUE)
 print(paste("El promedio de edad es:", round(media_edad, 2)))
 print(paste("El promedio de duración de sesión es:", round(media_sesion, 2), "minutos"))
 ```
-Tras el procesamiento de los datos, se observa que la media de la edad de los usuarios se encuentra en 31.99 años. Por otro lado la variable AvgSessionDurationMinutes arrojó un promedio de 94.79 minutos por sesión. Este valor es un indicador clave de engagement alto
+Tras el procesamiento de los datos, se observa que la media de la edad de los usuarios se encuentra en 31.99 años. Por otro lado la variable AvgSessionDurationMinutes arrojó un promedio de 94.79 minutos por sesión. Este valor es un indicador clave de engagement alto\
+
+\section{Rango}
+```{r}
+rango_sesion <- diff(range(og$AvgSessionDurationMinutes, na.rm = TRUE))
+print(rango_sesion)
+
+rango_edad <- diff(range(og$Age, na.rm = TRUE))
+print(rango_edad)
+```
+El rango en la variable AvgSessionDurationMinutes es de 169
+El rango en la variable Age es de 34\
+
+\section{Mediana}
+```{r}
+# Mediana de la Edad
+mediana_edad <- median(og$Age, na.rm = TRUE)
+
+# Mediana de la Duración de Sesión
+mediana_sesion <- median(og$AvgSessionDurationMinutes, na.rm = TRUE)
+
+# Mostrar resultados
+print(paste("La mediana de edad es:", mediana_edad))
+print(paste("La mediana de duración de sesión es:", mediana_sesion))
+```
+
 
 \section{Varianza}
 
@@ -304,14 +329,73 @@ print(paste(" Desviacion. Estándar =", round(sd_session, 2)))
 ```
 Al evaluar la variabilidad, la Edad presentó una varianza de 100.87 y una desviación de 10.04 años, lo que indica una dispersión moderada y un perfil demográfico relativamente compacto. Dicho esto, los usuarios tienden a agruparse cerca del promedio, por otro lado la variable 'AvgSessionDurationMinutes' reflejó una varianza de 2402.11 y una desviación de 49.01 minutos. Esta alta dispersión confirma una gran heterogeneidad en la muestra, evidenciando que el tiempo de juego es sumamente cambiante\
 
+\section{Coeficiente de variacion}
+```{r}
+cv_edad <- (sd(og$Age, na.rm = TRUE) / mean(og$Age, na.rm = TRUE)) * 100
 
-\section{Presentación de resultados 2}
+cv_sesion <- (sd(og$AvgSessionDurationMinutes, na.rm = TRUE) / mean(og$AvgSessionDurationMinutes, na.rm = TRUE)) * 100
 
-Descripción\
+print(paste("CV Edad:", round(cv_edad, 2), "%"))
+print(paste("CV Sesión:", round(cv_sesion, 2), "%"))
+```
+Se procedió a calcular el Coeficiente de Variación (CV). En el caso de la Edad, se obtuvo un valor del 31.39%, lo que indica una dispersión moderada-alta, Por su parte, la variable 'AvgSessionDurationMinutes' registró un CV del 51.70%. Al superar ampliamente el umbral del 30%, este resultado confirma que el tiempo de sesión es una variable con una dispersión extrema\
 
-\section{Presentación de resultados n}
+\section{¿Existen diferencias significativas en la edad media y la duración de las sesiones de juego cuando se comparan los distintos niveles de compromiso ?}
+```{r}
+#dividimos para obtener dos graficos
+par(mar=c(4, 4, 2, 1))
 
-Descripción\
+#Grafico 1 edad vs compromiso
+boxplot(Age ~ EngagementLevel, data = og,
+        main = "Edad por Compromiso",
+        col = "lightblue", ylab = "Años", xlab = "Nivel")
+
+
+par(mar = c(4, 4, 2 ,1)) 
+
+# grafico 2
+boxplot(AvgSessionDurationMinutes ~ EngagementLevel, 
+        data = og, 
+        col = "lightgreen")
+
+```
+
+
+En los gráficos obtenidos, se observa que la línea central de cada caja (la mediana) se desplaza hacia arriba conforme aumenta el nivel de compromiso. Dicho esto, aunque no se realizó un estudio profundo de los cuartiles, la representación visual permite confirmar que el 50% central de los usuarios con compromiso 'Alto' mantienen sesiones de juego sistemáticamente más largas que los niveles inferiores\
+
+\section{¿Cómo se distribuyen proporcionalmente los niveles de lealtad y retención dentro de cada género de videojuego, y qué segmentos presentan la mayor fidelidad?}
+
+Para evaluar la lealtad según el tipo de juego, se realizó un análisis de proporciones mediante un gráfico de barras apiladas al 100%. Este análisis permite observar cómo se distribuyen los niveles de compromiso de forma relativa, independientemente de cuántos usuarios tenga cada género.\
+
+```{r}
+#creamors una tabla genero vs compromiso 
+tabla <- table(og$EngagementLevel, og$GameGenre)
+
+# las convertimos en proporciones
+proporciones <- prop.table(tabla, margin = 2) * 100
+
+#hacemos el grafico
+
+barplot(proporciones, 
+        col = c("blue", "lightgreen", "lightblue"), 
+        legend = rownames(proporciones),
+        main = "Distribución de Lealtad por Género",
+        xlab = "Género de Videojuego",
+        ylab = "Porcentaje (%)",
+        beside = FALSE)
+```
+\
+
+\section{Evaluar la relación entre la edad del jugador y la duración de sus sesiones para determinar si el factor generacional influye en la permanencia dentro de los diferentes géneros de juego.}
+
+```{r}
+#calculamos la correlacion
+correlacion <- cor(og$Age, og$AvgSessionDurationMinutes, method = "pearson")
+print(paste("El coeficiente de correlación de Pearson es:", round(correlacion, 4)))
+
+```
+
+
 
 \chapter{Conclusiones y Recomendaciones}
 
