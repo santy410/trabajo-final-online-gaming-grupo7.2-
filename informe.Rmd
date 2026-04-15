@@ -228,19 +228,34 @@ En este capítulo se desarolla el proceso de selección de aquellos registros ne
  
 \section{Bases metódicas utilizadas en el trabajo de investigación}
 
-Desarrollo\
+En esta investigación fijamos un enfoque cuantitativo de nivel descriptivo, ya que se busca caracterizar el comportamiento del usuario utilizando los datos numericos de su nivel de compromiso, rango de edad y tiempos de sesión en diversas categorias de juego. Para ello se utilizo besas metodicas estadisticas, integrando datos cuantitativos y cualitativos presentes en el dataset objeto de estudio\
 
-\subsection{Item 1}
+\subsection{Verificación de datos nulos}
 
-Descripción\
+En esta investigacion se aplico un proceso de limpieza de datos centrado en encontrar y contabilizar los valores nulos para una mejor calidad al poder procesar las variables,dicho esto se utilizaron tecnicas de limpieza estadistica para asegurar que las variables cuantitativas y cualitativas del dataset no presentaran valores que puedan afectar los calculos\
 
-\subsection{Item 2}
+```{r}
 
-Descripción\
+og <- read.csv("17. Online Gaming (5).csv")
+colSums(is.na(og))
 
-\subsubsection{Item 2.2}
+```
 
-Descripción\
+\subsection{Seleccion de datos necesarios}
+
+Como se menciono en el capitulo I, se tomaron los registros del dataset que corresponden al compromiso de los usuarios en las plataformas de juegos en linea. Esto nos indica que las variables **Age** y **GameGenre** seran filtradas y procesadas para asegurar que el análisis se enfoque correctamente en el rango de edad y las preferencias de generos de juego, aparte se seleccionaron otras dos variables que son necsarias para el estudio son estas que nos permiten cuantificar el **PLayTimeHours** y el **EngagementLevel**, descartando cualquier otro tipo de informacion que no sea relevante para los calculos\
+
+```{r}
+#seleccionamos solo las variables necesarias
+variables_necesarias <- og[, c("Age", "GameGenre", "PlayTimeHours", "EngagementLevel")]
+
+head(variables_necesarias)
+
+```
+
+\subsubsection{Control de datos atipicos}
+
+Pa\
 
 \subsection{Item n}
 
