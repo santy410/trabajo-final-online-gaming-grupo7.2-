@@ -76,7 +76,7 @@ library(scales)
 \chapter{Planteamiento del Problema}
 
 
-En el análisis de datos modernos, el éxito de una plataforma de entretenimiento digital no se mide únicamente por la cantidad de usuarios registrados, si no por la cantidad de su interacción, fenómeno analizado mediante la medición de Engagement o nivel de compromiso. El dataset objeto de este estudio presenta una estructura integral que permite explorar como variables de distintas naturalezas (razón de edad , temporales y categorías) coinciden para definir el comportamiento del consumidor.
+En el análisis de datos modernos, el éxito de una plataforma de entretenimiento digital no se mide únicamente por la cantidad de usuarios registrados, sino por la cantidad de su interacción. Como señala Gupta (2020), este fenómeno de Engagement es el verdadero indicador de sostenibilidad, transformando el simple registro en una conexión emocional y operativa con el contenido. El dataset objeto de este estudio presenta una estructura integral que permite explorar como variables de distintas naturalezas (razón de edad , temporales y categorías) coinciden para definir el comportamiento del consumidor.
 El problema identificado para esta investigación surge de la necesidad de comprender los patrones que condicionan a la retención del usuario. A través de la observación de los datos disponibles, se percibe una complejidad propia: no existe una relación lineal evidente que explique por qué ciertos usuarios mantienen un compromiso alto mientras otros permanecen en niveles bajos. Surge entonces la interrogante de si factores biológicos y sociales, representados por la edad, o factores de intensidad operativa, como la duración promedio de las secciones, poseen un peso significativo en esta clasificación. Adicionalmente, se observa que la naturaleza del contenido, definida por el género del videojuego, actúa como un posible moderador de estas relaciones. Sin un análisis estadístico profundo, resulta difícil determinar si las sesiones de larga duración son una conducta ligada a la edad del jugador o si el tiempo de juego responde únicamente al tipo genero consumido. Esta incertidumbre representa un vacío en la interpretación de los datos que impide identificar con claridad como interactúan el rango de edad y el comportamiento temporal para generar un nivel de compromiso alto, medio o bajo.
 
  \
@@ -124,7 +124,10 @@ Dado que los datos originales no incluyen fechas de registro, no se enfoca en ti
 
 \section{Variables}
 
-Describir la variable en estudio en el trabajo de investigación 
+Age: Tipo numerica
+GameGenre: Tipo categorica
+EngagementLevel: Tipo categorica
+AvgSessionDurationMinutes: Tipo numerica
 
 \chapter{marco teorico
  }
@@ -138,7 +141,7 @@ En este capítulo se presentan las bases y conceptos necesarios para iniciar el 
 
 Los juegos online son videojuegos que requieren conexión a internet para funcionar, permitiendo a personas de distintos lugares interactuar simultáneamente en partidas compartidas. Funcionan mediante arquitectura cliente-servidor, enviando datos en tiempo real entre los jugadores y servidores \
 
-\subsection{Como Funcionan Los Jusgos Online}
+\subsection{Como Funcionan Los Juegos Online}
 
 Los juegos online son sistemas complejos que deben coordinar a múltiples jugadores en tiempo real, asegurando que todos vean lo mismo en el menor tiempo posible\
 
@@ -403,19 +406,24 @@ Para determinar si el factor generacional influye en la permanencia, se calculo 
 
 \chapter{Conclusiones y Recomendaciones}
 
-\textbf{1.-} Mediante esta investigacion nos hemos dado cuenta que que los videojuegos no necesariamente tienen que ir ligados a la edad, sabiendo que nuestro promedio es de 31.99 años, los datos nos dicen que no importa si tienes 18 o 50 esto no influye en cuanto tiempo le dedicas a jugar, en los graficos de caja nos muestra que un adulto mayor puede estar enganchando igual que un joven, por ende el interes depende del juego\
+\textbf{1.-} se concluye que existe una relacion directamente proporcional entre la duracion de las sesiones y el nivel de lealtad, ya que la mediana de tiempo se desplaza hacia arriba conforme aumenta el compromiso Por el contrario, la edad media no muestra variaciones significativas entre grupos, lo que indica que el engagement está definido por la intensidad del juego y no por la etapa biológica del usuario \
+
+\textbf{Recomendación} Se recomienda a los desarrolladores enfocar sus estrategias de retención en la duración de las sesiones de juego como métrica principal, por encima de los datos tradicionales como la edad, dado que el tiempo es el predictor real del compromiso.\
+
+\textbf{2.-} El análisis de proporciones al 100% permitió identificar que la lealtad no es uniforme entre categorías, existiendo géneros que logran concentrar una mayor proporción de usuarios en el nivel "Alto". Esto demuestra que la capacidad de retención y fidelización de un título depende más de sus mecánicas específicas y género\
 
 \textbf{Recomendación} 
-\
+Para aquellos géneros que mostraron una mayor tendencia hacia el compromiso "Bajo", se sugiere implementar sistemas de recompensa o eventos en tiempo real que incentiven la permanencia\
 
-\textbf{2.-} Conclusion 2 del trabajo de investigación.\
+\textbf{n.-} Tras evaluar la relación entre edad y tiempo de sesión, se concluye que el factor generacional no influye en la permanencia del jugador. La alta dispersión encontrada en el tiempo de juego (CV de 51.7%) frente a la relativa estabilidad de la edad sugiere que los hábitos de consumo son heterogéneos y transversales, rompiendo el mito de que solo los más jóvenes mantienen sesiones prolongadas\
 
-\textbf{Recomendación} 
-Recomendación 2 del trabajo de investigación.\
+\chapter{Bibliografias}
 
-\textbf{n.-} Conclusion n del trabajo de investigación.\
+https://clientify.com/blog/que-es-engagement-medicion-casos-exito \medskip
 
-\textbf{Recomendación} Recomendación n del trabajo de investigación.\
+https://dialnet.unirioja.es/descarga/articulo/9435241.pdf
+
+
 
 \appendix
 \renewcommand{\thechapter}{\Alph{chapter}}
