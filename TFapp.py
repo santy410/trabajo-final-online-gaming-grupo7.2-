@@ -131,8 +131,8 @@ else:
 st.divider()
 
 # ....pestañas....
-lista_pestanas = ["📊 Análisis de Medias", "📈 Distribución", "📍Relación edad-tiempo de sesión" ,"📂 Ver Tabla de Datos"]
-pestana1, pestana2, pestana3, pestana4 = st.tabs(lista_pestanas)
+lista_pestañas = ["📊 Análisis de Medias", "📈 Distribución", "📍Relación edad-tiempo de sesión" ,"📂 Ver Tabla de Datos"]
+pestaña1, pestaña2, pestaña3, pestaña4 = st.tabs(lista_pestañas)
 
 # definimos paleta de colores 
 mis_colores = ["#1f77b4", "#30CE6D", "#003366", "#beee62", "#70ae6e"]
@@ -140,7 +140,7 @@ mis_colores = ["#1f77b4", "#30CE6D", "#003366", "#beee62", "#70ae6e"]
 
 #....PRIMERA PESTAÑA....
 
-with pestana1:
+with pestaña1:
     with st.container(border=True):
         st.header("📊 Análisis de Medias: Tiempo de Sesión y Edad según el Engagement")
 
@@ -194,7 +194,7 @@ with pestana1:
 
 #....SEGUNDA PESTAÑA....
 
-with pestana2:
+with pestaña2:
     st.subheader("Distribución del Nivel de Compromiso  por Categoría de Juego")
     col_graf3, col_txt3 = st.columns([7, 3])
 
@@ -223,7 +223,7 @@ Al observar el grafico, se identifica una **distribución notablemente homogéne
 
 #.... pestaña numero 3....
 
-with pestana3:
+with pestaña3:
     st.subheader("Analisis de tendencia: Edad vs. Tiempo de juego por sesion")
 
     col_graf3, col_txt3= st.columns([7, 3])    
@@ -250,5 +250,23 @@ with pestana3:
     with col_txt3:
         st.success("\nEn este gráfico podemos ver cómo cambia la permanencia en el juego a medida que el rango de edad aumenta. \n\nAl no tomar en cuenta las otras variable podemos ver que No existe una relación lineal fuerte entre la edad y el tiempo")
 
+#....pestaña4....
+with pestaña4:
+    st.header("Base de datos")
+    st.write("En esta ultima sección se muestran todos los datos que fueron utilizados")
 
+    #mostramos dataset
+    st.dataframe(df_filtrado)
+
+    #colocamos numero de filas  y de columnas 
+    st.write("---")
+    col_informacion1, col_informacion2 = st.columns(2)
+
+    with col_informacion1:
+        st.write(f"**Numero de filas:** { len (df_filtrado)}")
+
+    with col_informacion2:
+        st.write(f"**Numero de filas**: {len(df_filtrado)} ")
+
+#terminamos dashboard
         
