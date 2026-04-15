@@ -243,31 +243,67 @@ colSums(is.na(og))
 
 \subsection{Seleccion de datos necesarios}
 
-Como se menciono en el capitulo I, se tomaron los registros del dataset que corresponden al compromiso de los usuarios en las plataformas de juegos en linea. Esto nos indica que las variables **Age** y **GameGenre** seran filtradas y procesadas para asegurar que el análisis se enfoque correctamente en el rango de edad y las preferencias de generos de juego, aparte se seleccionaron otras dos variables que son necsarias para el estudio son estas que nos permiten cuantificar el **PLayTimeHours** y el **EngagementLevel**, descartando cualquier otro tipo de informacion que no sea relevante para los calculos\
+Como se menciono en el capitulo I, se tomaron los registros del dataset que corresponden al compromiso de los usuarios en las plataformas de juegos en linea. Esto nos indica que las variables **Age** y **GameGenre** seran filtradas y procesadas para asegurar que el análisis se enfoque correctamente en el rango de edad y las preferencias de generos de juego, aparte se seleccionaron otras dos variables que son necsarias para el estudio son estas que nos permiten cuantificar el **AvgSessionDurationMinutes** y el **EngagementLevel**, descartando cualquier otro tipo de informacion que no sea relevante para los calculos\
 
 ```{r}
 #seleccionamos solo las variables necesarias
-variables_necesarias <- og[, c("Age", "GameGenre", "PlayTimeHours", "EngagementLevel")]
+variables_necesarias <- og[, c("Age", "GameGenre", "AvgSessionDurationMinutes", "EngagementLevel")]
 
 head(variables_necesarias)
 
 ```
 
-\subsubsection{Control de datos atipicos}
+\subsubsection{Procedimiento y Herraientas de procesamiento}
 
-Pa\
-
-\subsection{Item n}
-
-Descripción\
-
+Para la programacion de la parte analitica, se utilizo el lenguaje de programacion **R** operando desde Rstudio, con la ayuda de Tidyverse utilizando librerías como los son (“dplyr” y “tidyr”), se escanea el dataset en busca de valores nulos que puedan afectar el análisis. Dando como resultado la ausencia de datos nulos en todas las columnas del dataset original.
+\
 \chapter{Análisis de Resultados}
 
 {\small Este capítulo presenta los resultados obtenidos al aplicar las metodologías descritas en el capítulo anterior, así como del análisis estadístico descriptivo de las variables estudiadas y las ventajas y desventajas al aplicar dichos tests.}
 
-\section{Presentación de resultados 1}
+\section{**Medidas de tendencia central y dispersion**}
 
-Descripción\
+Para profundizar en el perfil de los usuarios, se procedio a realizar un analisis de tendencia central sobre las variables cuantitativas de edad y duracion promedio se sesión. Dicho esto se calculo la media para poder encontrar el punto de equilibrio de los datos lo que nos permite establecer un estandar para el grupo de jugadores\
+
+```{r}
+#calculamos la media de la edad
+media_edad <- mean(og$Age, na.rm = TRUE)
+
+#calculamos la media de duracion promedio por session 
+
+media_sesion <- mean(og$AvgSessionDurationMinutes, na.rm = TRUE)
+
+#mostramos los resultados
+
+print(paste("El promedio de edad es:", round(media_edad, 2)))
+print(paste("El promedio de duración de sesión es:", round(media_sesion, 2), "minutos"))
+```
+Tras el procesamiento de los datos, se observa que la media de la edad de los usuarios se encuentra en 31.99 años. Por otro lado la variable AvgSessionDurationMinutes arrojó un promedio de 94.79 minutos por sesión. Este valor es un indicador clave de engagement alto
+
+\section{Varianza}
+
+```{r}
+#calculamos la varianza de la edad 
+varianza_edad <- var(og$Age, na.rm = TRUE)
+#calculamos la varianza del tiempo promedio
+varianza_sesion <- var(og$AvgSessionDurationMinutes, na.rm = TRUE)
+
+print(paste("Varianza de la edad:", round(varianza_edad, 2)))
+print(paste("Varianza de la duración de sesión:", round(varianza_sesion, 2)))
+
+
+#sacamos la desviacion estandar 
+
+sd_age <- sd(og$Age, na.rm = TRUE)
+sd_session <- sd(og$AvgSessionDurationMinutes, na.rm = TRUE)
+
+print(paste("Desviacion. Estándar =", round(sd_age, 2)))
+print(paste(" Desviacion. Estándar =", round(sd_session, 2)))
+
+
+```
+Al evaluar la variabilidad, la Edad presentó una varianza de 100.87 y una desviación de 10.04 años, lo que indica una dispersión moderada y un perfil demográfico relativamente compacto. Dicho esto, los usuarios tienden a agruparse cerca del promedio, por otro lado la variable 'AvgSessionDurationMinutes' reflejó una varianza de 2402.11 y una desviación de 49.01 minutos. Esta alta dispersión confirma una gran heterogeneidad en la muestra, evidenciando que el tiempo de juego es sumamente cambiante\
+
 
 \section{Presentación de resultados 2}
 
